@@ -1,4 +1,4 @@
-package ru.ekazantsev.nsd_empty_fake_api;
+package ru.ekazantsev.nsd_global_variables;
 
 import ru.naumen.core.shared.dto.ISDtObject;
 
@@ -7,7 +7,7 @@ import java.util.Map;
 
 /** Пустой placeholder переменных контекста скриптового действия по событию */
 @SuppressWarnings("unused")
-public class EventActionGlobalVariablesPlaceholder {
+public class GlobalVariablesPlaceholder {
 
     /**
      * Пользователь, инициализировавший событие. Является объектом класса "Сотрудник" (employee).

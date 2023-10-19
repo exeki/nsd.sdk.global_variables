@@ -1,4 +1,4 @@
-package ru.ekazantsev.nsd_empty_fake_api;
+package ru.ekazantsev.nsd_global_variables;
 
 import org.slf4j.Logger;
 import ru.naumen.core.server.rest.IRestApi;
@@ -63,7 +63,7 @@ import ru.naumen.core.server.script.api.ISchedulerApi;
  * глобальных переменных nsd
  */
 @SuppressWarnings("unused")
-public class EmptyNaumenApiPlaceholder {
+public class ApiPlaceholder {
     /**
      * Апи, содержит в себе много других
      */
