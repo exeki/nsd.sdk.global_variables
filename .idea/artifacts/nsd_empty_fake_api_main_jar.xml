@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="nsd_empty_fake_api.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/nsd_empty_fake_api_main_jar</output-path>
+    <root id="archive" name="nsd_empty_fake_api.main.jar">
+      <element id="module-output" name="nsd_empty_fake_api.main" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../nsd_classes/out/artifacts/nsd_classes_main_jar/nsd_classes.main.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
