@@ -2,26 +2,10 @@ package ru.ekazantsev.nsd_global_variables;
 
 import org.slf4j.Logger;
 import ru.naumen.core.server.rest.IRestApi;
+import ru.naumen.core.server.script.api.*;
 import ru.naumen.core.server.script.api.push.INotificationApi;
 import ru.naumen.core.server.script.spi.IScriptConditionsApi;
 import ru.naumen.core.server.script.spi.IScriptUtils;
-import ru.naumen.core.server.script.api.ISearchParams;
-import ru.naumen.core.server.script.api.IMetainfoApi;
-import ru.naumen.core.server.script.api.IOuApi;
-import ru.naumen.core.server.script.api.IEmployeeApi;
-import ru.naumen.core.server.script.api.IWebApi;
-import ru.naumen.core.server.script.api.ITimingApi;
-import ru.naumen.core.server.script.api.ISecurityApi;
-import ru.naumen.core.server.script.api.IAuthenticationApi;
-import ru.naumen.core.server.script.api.ICacheApi;
-import ru.naumen.core.server.script.api.IDateApi;
-import ru.naumen.core.server.script.api.IMailApi;
-import ru.naumen.core.server.script.api.IAdvimportApi;
-import ru.naumen.core.server.script.api.IHttpClientApi;
-import ru.naumen.core.server.script.api.IEncrytionApi;
-import ru.naumen.core.server.script.api.IDbApi;
-import ru.naumen.core.server.script.api.IBarcodeApi;
-import ru.naumen.core.server.script.api.ISchedulerApi;
 
 
 /*
@@ -50,7 +34,6 @@ import ru.naumen.core.server.script.api.ISchedulerApi;
  * api.string Утилитарные методы для работы со строками
  * api.structure. Работа со структурами
  * api.systemUtils. Быстрое редактирование объектов
- * api.tx Работа с транзакциями
  * api.websocket Методы для работы с Websocket-каналом
  * api.wf Получение статуса и списка переходов
  * Работа с отчетами и печатными формами
@@ -93,6 +76,11 @@ public class ApiPlaceholder {
      * Плейсхолдер базового апи nsd
      */
     static class Api {
+
+        /**
+         * Работа с транзакциями
+         */
+        public ITransactionApi tx;
 
         /**
          * Работа с метаинформацией
