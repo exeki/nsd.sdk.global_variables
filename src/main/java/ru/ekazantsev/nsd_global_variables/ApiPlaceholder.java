@@ -10,10 +10,7 @@ import ru.naumen.core.server.script.spi.IScriptUtils;
 
 /*
  * не выгруженные
- * api.actionContext Получение контекста выполняемого действия
- * api.apps Работа с контентом типа "Встроенное приложение"
  * api.attrs. Работа с атрибутами
- * api.calendarEvent Работа с событиями календаря в формате ICS
  * api.collections Работа с коллекциями
  * api.fileStorage Работа с файловыми хранилищами
  * api.filters Работа со скриптами фильтрации
@@ -47,6 +44,7 @@ import ru.naumen.core.server.script.spi.IScriptUtils;
  */
 @SuppressWarnings("unused")
 public class ApiPlaceholder {
+
     /**
      * Апи, содержит в себе много других
      */
@@ -76,6 +74,21 @@ public class ApiPlaceholder {
      * Плейсхолдер базового апи nsd
      */
     static class Api {
+
+        /**
+         * Работа с атрибутами
+         */
+        public static IAttributesApi attrs;
+
+        /**
+         * Работа с событиями календаря в формате ICS
+         */
+        public static ICalendarEventApi calendarEvent;
+
+        /**
+         * Получение контекста выполняемого действия:
+         */
+        public static IActionContextApi actionContext;
 
         /**
          * Работа с транзакциями
