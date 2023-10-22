@@ -10,7 +10,6 @@ import ru.naumen.core.server.script.spi.IScriptUtils;
 
 /*
  * не выгруженные
- * api.attrs. Работа с атрибутами
  * api.collections Работа с коллекциями
  * api.fileStorage Работа с файловыми хранилищами
  * api.filters Работа со скриптами фильтрации
