@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.ekazantsev'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation files('C:\\projects\\nds\\projects\\sdk\\nsd_upper_level_classes\\build\\libs\\nsd_upper_level_classes-1.0.0.jar')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = 'exclude'
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+compileJava.options.encoding = 'UTF-8'
