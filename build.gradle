@@ -1,28 +1,47 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'maven-publish'
 }
 
 group = 'ru.ekazantsev'
 version = '1.0.0'
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    implementation 'org.slf4j:slf4j-api:2.0.9'
-    implementation files('C:\\projects\\nds\\projects\\sdk\\nsd_upper_level_classes\\build\\libs\\nsd_upper_level_classes-1.0.0.jar')
+    api 'org.slf4j:slf4j-api:2.0.9'
+    api 'ru.ekazantsev:nsd_upper_level_classes:1.0.0'
 }
 
 test {
     useJUnitPlatform()
 }
 
-jar {
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-    duplicatesStrategy = 'exclude'
+//jar {
+//    from {
+//        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+//    }
+//    duplicatesStrategy = 'exclude'
+//}
+
+javadoc {
+    options.encoding = 'UTF-8'
 }
 
 sourceCompatibility = 1.11
