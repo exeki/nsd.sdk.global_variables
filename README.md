@@ -7,8 +7,8 @@
 
 Для подключения в скрипт при разработке в IDE нужно произвести их статический импорт.
 ```groovy
-import static ru.ekazantsev.nsd_global_variables.ApiPlaceholder.*
-import static ru.ekazantsev.nsd_global_variables.GlobalVariablesPlaceholder.*
+import static ru.kazantsev.nsd,global_variables.ApiPlaceholder.*
+import static ru.kazantsev.nsd,global_variables.GlobalVariablesPlaceholder.*
 ```
 Данные импорты не запустятся ни в IDE, ни в NSD, при закуске кода в NSD их нужно удалить.
 

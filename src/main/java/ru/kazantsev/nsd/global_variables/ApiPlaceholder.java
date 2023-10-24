@@ -1,4 +1,4 @@
-package ru.ekazantsev.nsd_global_variables;
+package ru.kazantsev.nsd.global_variables;
 
 import org.slf4j.Logger;
 import ru.naumen.core.server.rest.IRestApi;

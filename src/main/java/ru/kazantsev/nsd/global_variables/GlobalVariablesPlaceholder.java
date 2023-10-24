@@ -1,4 +1,4 @@
-package ru.ekazantsev.nsd_global_variables;
+package ru.kazantsev.nsd.global_variables;
 
 import ru.naumen.core.shared.dto.ISDtObject;
 
