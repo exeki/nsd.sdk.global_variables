@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "ru.kazantsev.nsd"
+group = "ru.kazantsev.nsd.sdk"
 version = "1.0.0"
 
 java {
