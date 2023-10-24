@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "ru.ekazantsev"
+group = "ru.kazantsev.nsd"
 version = "1.0.0"
 
 java {
@@ -25,17 +25,16 @@ publishing {
     }
     repositories {
         mavenLocal()
-        mavenLocal()
     }
 }
 
 repositories {
-    mavenCentral()
     mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
-    implementation ("org.slf4j:slf4j-api:2.0.9")
-    implementation ("ru.ekazantsev.nsd_upper_level_classes:1.0.0")
+    api ("org.slf4j:slf4j-api:2.0.9")
+    api ("ru.kazantsev.nsd:upper_level_classes:1.0.0")
 }
 
