@@ -16,10 +16,10 @@ java {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            artifact(tasks.named("jar"))
-            artifact(tasks.named("javadocJar"))
-            artifact(tasks.named("sourcesJar"))
-//            from(components["java"])
+//            artifact(tasks.named("jar"))
+//            artifact(tasks.named("javadocJar"))
+//            artifact(tasks.named("sourcesJar"))
+            from(components["java"])
 //            pom {
 //                groupId = project.group.toString()
 //                artifactId = project.name
