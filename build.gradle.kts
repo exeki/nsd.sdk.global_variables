@@ -8,6 +8,7 @@ version = "1.0.0"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
     withJavadocJar()
     withSourcesJar()
 }
@@ -15,12 +16,15 @@ java {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            from(components["java"])
-            pom {
-                groupId = project.group.toString()
-                artifactId = project.name
-                version = project.version.toString()
-            }
+            artifact(tasks.named("jar"))
+            artifact(tasks.named("javadocJar"))
+            artifact(tasks.named("sourcesJar"))
+//            from(components["java"])
+//            pom {
+//                groupId = project.group.toString()
+//                artifactId = project.name
+//                version = project.version.toString()
+//            }
         }
     }
     repositories {
