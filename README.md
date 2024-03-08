@@ -7,9 +7,12 @@
 
 Для подключения в скрипт при разработке в IDE нужно произвести их статический импорт.
 ```groovy
-import static ru.kazantsev.nsd,global_variables.ApiPlaceholder.*
-import static ru.kazantsev.nsd,global_variables.GlobalVariablesPlaceholder.*
+import static ru.kazantsev.nsd.global_variables.ApiPlaceholder.*
+import static ru.kazantsev.nsd.global_variables.GlobalVariablesPlaceholder.*
 ```
+Класс ApiPlaceholder содержит глобальные переменные, специфические для модулей (глобальные переменные API), то есть не относящиеся к контексту выполнения, такие как api, utils и тд.
+Класс GlobalVariablesPlaceholder содержит глобальные переменные, специфические для различных событийных скриптов (ДПС, скрипты при входе в статус и тд), такие как subject, user и тд.
+
 Данные импорты не запустятся ни в IDE, ни в NSD, при закуске кода в NSD их нужно удалить.
 
 Библиотека собрана на основании документации Naumen.
