@@ -56,6 +56,15 @@ tasks {
         archiveVersion.set("")
         compression = Compression.GZIP
         from(javadoc.get().destinationDir)
+        println(javadoc.get().destinationDir)
+        finalizedBy(named<Tar>("javadocGz").get())
+    }
+    register<Tar>("javadocGz") {
+        archiveBaseName.set("javadoc")
+        archiveExtension.set("tar.gz")
+        archiveVersion.set("")
+        compression = Compression.GZIP
+        from(named<Tar>("javadocTar").get().archiveFile)
     }
     javadoc.get().finalizedBy(named<Tar>("javadocTar").get())
 }
