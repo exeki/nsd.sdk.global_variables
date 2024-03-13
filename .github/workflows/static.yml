@@ -10,7 +10,8 @@ jobs:
       contents: read
       packages: write
       id-token: write
-
+      pages: write
+      
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
