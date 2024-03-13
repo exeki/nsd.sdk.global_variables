@@ -40,7 +40,6 @@ repositories {
         }
     }
     mavenCentral()
-
 }
 
 dependencies {
