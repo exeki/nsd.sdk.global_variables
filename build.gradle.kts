@@ -57,11 +57,11 @@ tasks {
         compression = Compression.GZIP
         from(javadoc.get().destinationDir)
         println(javadoc.get().destinationDir)
-        finalizedBy(named<Tar>("javadocGz").get())
+        finalizedBy(named<Tar>("githubPagesGz").get())
     }
-    register<Tar>("javadocGz") {
-        archiveBaseName.set("javadoc")
-        archiveExtension.set("tar.gz")
+    register<Tar>("githubPagesGz") {
+        archiveBaseName.set("github-pages")
+        archiveExtension.set("gz")
         archiveVersion.set("")
         compression = Compression.GZIP
         from(named<Tar>("javadocTar").get().archiveFile)
