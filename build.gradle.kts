@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.bundling.Tar
+
 plugins {
     id("java-library")
     id("maven-publish")
@@ -48,9 +50,12 @@ dependencies {
 }
 
 tasks {
-    register<Copy>("copyJavadoc") {
+    register<Tar>("javadocTar") {
+        archiveBaseName.set("javadoc")
+        archiveExtension.set("tar")
+        archiveVersion.set("")
+        compression = Compression.GZIP
         from(javadoc.get().destinationDir)
-        into(file("$projectDir/docs"))
     }
-    javadoc.get().finalizedBy(named("copyJavadoc"))
+    javadoc.get().finalizedBy(named<Tar>("javadocTar").get())
 }
