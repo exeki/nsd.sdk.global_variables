@@ -47,3 +47,10 @@ dependencies {
     api ("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.0")
 }
 
+tasks {
+    register<Copy>("copyJavadoc") {
+        from(javadoc.get().destinationDir)
+        into(file("$projectDir/docs"))
+    }
+    javadoc.get().finalizedBy(named("copyJavadoc"))
+}
