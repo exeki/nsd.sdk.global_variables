@@ -45,26 +45,41 @@ repositories {
 }
 
 dependencies {
-    api ("org.slf4j:slf4j-api:2.0.9")
-    api ("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.0")
+    api("org.slf4j:slf4j-api:2.0.9")
+    api("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.0")
 }
-
+    /*
 tasks {
+
     register<Tar>("javadocTar") {
-        archiveBaseName.set("javadoc")
+        archiveBaseName.set("javadoc8")
         archiveExtension.set("tar")
         archiveVersion.set("")
+        include("*.*")
         compression = Compression.GZIP
-        from(javadoc.get().destinationDir)
-        println(javadoc.get().destinationDir)
+        val files = File("${projectDir}/build/docs/javadoc/").listFiles()!!.map { it.path }
+        files.forEach { println(it) }
+        into("/")
+        from(files)
         finalizedBy(named<Tar>("githubPagesGz").get())
     }
-    register<Tar>("githubPagesGz") {
-        archiveBaseName.set("github-pages")
-        archiveExtension.set("gz")
-        archiveVersion.set("")
-        compression = Compression.GZIP
-        from(named<Tar>("javadocTar").get().archiveFile)
-    }
+
     javadoc.get().finalizedBy(named<Tar>("javadocTar").get())
+
+    register<Tar>("testtar") {
+        archiveBaseName.set("aaa")
+        archiveExtension.set("tar")
+
+
+        into("build/distributions") {
+            from("build/docs")
+            include("*.html")
+        }
+        destinationDirectory.set(File("build/distributions"))
+
+
+        compression = Compression.GZIP
+    }
+
 }
+*/
