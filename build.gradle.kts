@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.0.0"
+version = "1.0.1"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -46,7 +46,7 @@ repositories {
 
 dependencies {
     api("org.slf4j:slf4j-api:2.0.9")
-    api("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.0")
+    api("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.1")
 }
     /*
 tasks {
