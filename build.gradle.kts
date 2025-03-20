@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.0.2"
+version = "1.1.1"
 
 java {
     withJavadocJar()
@@ -41,6 +41,6 @@ repositories {
 }
 
 dependencies {
-    implementation("org.slf4j:slf4j-api:2.0.16")
-    implementation("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.2")
+    api ("org.slf4j:slf4j-api:2.0.16")
+    api ("ru.kazantsev.nsd.sdk:upper_level_classes:1.1.1")
 }
