@@ -41,6 +41,5 @@ repositories {
 }
 
 dependencies {
-    api ("org.slf4j:slf4j-api:2.0.16")
-    api ("ru.kazantsev.nsd.sdk:upper_level_classes:1.1.1")
+    api ("ru.kazantsev.nsd.sdk:upper_level_classes:1.1.3")
 }
