@@ -40,8 +40,7 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
-    api("org.slf4j:slf4j-api:2.0.16")
-    api("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.2")
+    implementation("org.slf4j:slf4j-api:2.0.16")
+    implementation("ru.kazantsev.nsd.sdk:upper_level_classes:1.0.2")
 }
