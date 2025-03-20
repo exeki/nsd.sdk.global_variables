@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.1.1"
+version = "1.1.3"
 
 java {
     withJavadocJar()
