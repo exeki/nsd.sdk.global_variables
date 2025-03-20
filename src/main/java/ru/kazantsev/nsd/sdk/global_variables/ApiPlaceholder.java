@@ -6,7 +6,7 @@ import ru.naumen.core.server.script.api.*;
 import ru.naumen.core.server.script.api.push.INotificationApi;
 import ru.naumen.core.server.script.spi.IScriptConditionsApi;
 import ru.naumen.core.server.script.spi.IScriptUtils;
-
+import ru.naumen.core.shared.userevents.UserEventActionResult;
 
 /*
  * не выгруженные
@@ -216,5 +216,11 @@ public class ApiPlaceholder {
          */
         //реализация в ru.naumen.mailreader.server.processor.scripted.MailApi
         public IMailApi mail;
+
+        /**
+         *
+         */
+        //ru.naumen.core.shared.userevents.UserEventActionResult
+        public UserEventActionResult result;
     }
 }
