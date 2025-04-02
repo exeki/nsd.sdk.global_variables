@@ -14,7 +14,6 @@ import ru.naumen.core.shared.userevents.UserEventActionResult;
  * api.fileStorage Работа с файловыми хранилищами
  * api.filters Работа со скриптами фильтрации
  * api.fts Полнотекстовый поиск
- * api.keyValue Работа с хранилищем пар "ключ-значение"
  * api.keystore Работа с сертификатами
  * api.ldap Работа с LDAP
  * api.location Запрос геопозиции
@@ -74,6 +73,10 @@ public class ApiPlaceholder {
      */
     static class Api {
 
+        /**
+         * Работа с хранилищем пар "ключ-значение"
+         */
+        public static KeyValueStorageApi keyValue;
         /**
          * Работа с атрибутами
          */
