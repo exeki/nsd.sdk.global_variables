@@ -220,10 +220,5 @@ public class ApiPlaceholder {
         //реализация в ru.naumen.mailreader.server.processor.scripted.MailApi
         public IMailApi mail;
 
-        /**
-         *
-         */
-        //ru.naumen.core.shared.userevents.UserEventActionResult
-        public UserEventActionResult result;
     }
 }
