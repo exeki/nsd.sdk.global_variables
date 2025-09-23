@@ -8,6 +8,8 @@ import ru.naumen.core.server.script.spi.IScriptConditionsApi;
 import ru.naumen.core.server.script.spi.IScriptUtils;
 import ru.naumen.core.shared.userevents.UserEventActionResult;
 
+import java.util.Map;
+
 /*
  * не выгруженные
  * api.collections Работа с коллекциями
@@ -67,6 +69,12 @@ public class ApiPlaceholder {
      * реализация в ru.naumen.core.server.script.spi.ScriptConditionsApi
      */
     public static IScriptConditionsApi op;
+
+    /**
+     * используется для обращения к скриптовому модулю и конкретному методу,
+     * определенному в нем, с помощью конструкции: modules.{код модуля}.{имя метода}({параметры метода}...);
+     */
+    public static Map<String,Object> modules;
 
     /**
      * Плейсхолдер базового апи nsd

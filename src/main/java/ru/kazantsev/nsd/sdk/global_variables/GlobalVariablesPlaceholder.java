@@ -1,5 +1,6 @@
 package ru.kazantsev.nsd.sdk.global_variables;
 
+import ru.naumen.core.server.eventaction.jms.Notification;
 import ru.naumen.core.shared.dto.ISDtObject;
 import ru.naumen.core.shared.userevents.UserEventActionResult;
 
@@ -82,7 +83,7 @@ public class GlobalVariablesPlaceholder {
     public static ISDtObject cardObject;
 
     /** оповещение */
-    public static Object notification;
+    public static Notification notification;
 
     /**
      * критерии выборки объектов, если действие было инициировано из списка.

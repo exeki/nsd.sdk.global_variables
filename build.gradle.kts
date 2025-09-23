@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.1.8"
+version = "1.2"
 
 java {
     withJavadocJar()
@@ -41,5 +41,5 @@ repositories {
 }
 
 dependencies {
-    api ("ru.kazantsev.nsd.sdk:upper_level_classes:1.1.7")
+    api ("ru.kazantsev.nsd.sdk:upper_level_classes:1.2")
 }
