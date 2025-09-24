@@ -1,6 +1,7 @@
 package ru.kazantsev.nsd.sdk.global_variables;
 
 import ru.naumen.core.server.eventaction.jms.Notification;
+import ru.naumen.core.server.script.spi.ScriptDtOList;
 import ru.naumen.core.shared.dto.ISDtObject;
 import ru.naumen.core.shared.userevents.UserEventActionResult;
 
@@ -46,7 +47,7 @@ public class GlobalVariablesPlaceholder {
      * Переменная содержит только те объекты, относительно которых у
      * текущего пользователя есть право на выполняемое действие. Если прав нет, subjects = null.
      */
-    public static ISDtObject subjects;
+    public static ScriptDtOList<ISDtObject> subjects;
 
     /**
      * текущий объект, над которым производится действие (значение переменной может быть null).
