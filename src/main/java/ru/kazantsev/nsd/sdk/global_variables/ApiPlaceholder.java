@@ -82,6 +82,10 @@ public class ApiPlaceholder {
     static class Api {
 
         /**
+         * Работа с классами обслуживания
+         */
+        public static ServiceTimeApi serviceTime;
+        /**
          * Работа с хранилищем пар "ключ-значение"
          */
         public static KeyValueStorageApi keyValue;
