@@ -232,5 +232,11 @@ public class ApiPlaceholder {
         //реализация в ru.naumen.mailreader.server.processor.scripted.MailApi
         public IMailApi mail;
 
+        /**
+         * Работа с тимпами
+         */
+        //реализация в ru.naumen.core.server.script.api.TypesApi
+        public TypesApi types;
+
     }
 }
