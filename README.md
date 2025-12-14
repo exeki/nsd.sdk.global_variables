@@ -12,7 +12,10 @@ import static ru.kazantsev.nsd.global_variables.GlobalVariablesPlaceholder.*
 ```
 Класс ApiPlaceholder содержит глобальные переменные, специфические для модулей (глобальные переменные API), то есть не относящиеся к контексту выполнения, такие как api, utils и тд.
 Класс GlobalVariablesPlaceholder содержит глобальные переменные, специфические для различных событийных скриптов (ДПС, скрипты при входе в статус и тд), такие как subject, user и тд.
-
+Если вы работаете с обработчиком почты, используйте класс MailVariablePlaceholder вместо GlobalVariablesPlaceholder. Для переменных обработчиков почты создан отдельный класс, тк их имена повторяются с именами других переменных в других типах скриптов.
+```groovy
+import static ru.kazantsev.nsd.global_variables.MailVariablePlaceholder.*
+```
 Данные импорты не запустятся ни в IDE, ни в NSD, при закуске кода в NSD их нужно удалить.
 
 Библиотека собрана на основании документации Naumen.
