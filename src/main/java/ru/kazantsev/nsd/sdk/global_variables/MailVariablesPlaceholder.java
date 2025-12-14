@@ -3,7 +3,7 @@ package ru.kazantsev.nsd.sdk.global_variables;
 import ru.naumen.mailreader.server.processor.IMailProcessingResult;
 import ru.naumen.mailreader.server.queue.IInboundMailMessage;
 
-public class MailVariablePlaceholder {
+public class MailVariablesPlaceholder {
     /**
      * код подключения к серверу входящей почты, с которым связан обработчик почты.
      */
