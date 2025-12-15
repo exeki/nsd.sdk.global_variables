@@ -238,5 +238,11 @@ public class ApiPlaceholder {
         //реализация в ru.naumen.core.server.script.api.TypesApi
         public TypesApi types;
 
+        /**
+         * Работа со строками
+         */
+        //реализация в ru.naumen.
+        public IStringApi string;
+
     }
 }
