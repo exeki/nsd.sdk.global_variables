@@ -6,7 +6,6 @@ import ru.naumen.core.server.script.api.*;
 import ru.naumen.core.server.script.api.push.INotificationApi;
 import ru.naumen.core.server.script.spi.IScriptConditionsApi;
 import ru.naumen.core.server.script.spi.IScriptUtils;
-import ru.naumen.core.shared.userevents.UserEventActionResult;
 
 import java.util.Map;
 
@@ -241,7 +240,7 @@ public class ApiPlaceholder {
         /**
          * Работа со строками
          */
-        //реализация в ru.naumen.
+        //реализация в ru.naumen.core.server.script.api.StringApi
         public IStringApi string;
 
     }
