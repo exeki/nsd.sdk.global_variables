@@ -3,6 +3,8 @@ package ru.kazantsev.nsd.sdk.global_variables;
 import org.slf4j.Logger;
 import ru.naumen.core.server.rest.IRestApi;
 import ru.naumen.core.server.script.api.*;
+import ru.naumen.core.server.script.api.StringApi;
+import ru.naumen.core.server.script.api.TransactionApi
 import ru.naumen.core.server.script.api.push.INotificationApi;
 import ru.naumen.core.server.script.spi.IScriptConditionsApi;
 import ru.naumen.core.server.script.spi.IScriptUtils;
@@ -28,7 +30,6 @@ import java.util.Map;
  * api.silentMode Работа с Silent Mode
  * api.sms Отправка SMS
  * api.soap Формирование запросов к SOAP сервисам
- * api.string Утилитарные методы для работы со строками
  * api.structure. Работа со структурами
  * api.systemUtils. Быстрое редактирование объектов
  * api.websocket Методы для работы с Websocket-каналом
@@ -59,20 +60,20 @@ public class ApiPlaceholder {
     public static Logger logger;
 
     /**
-     * Параметры поиска (лимиты, параметры запроса)
-     * ru.naumen.core.server.script.api.SearchParams
+     * Параметры поиска (лимиты, параметры запроса) {@link ru.naumen.core.server.script.api.SearchParams}
      */
     public static ISearchParams sp;
 
     /**
-     * Параметры поиска (условные операции)
-     * реализация в ru.naumen.core.server.script.spi.ScriptConditionsApi
+     * Параметры поиска (условные операции) {@link ru.naumen.core.server.script.spi.ScriptConditionsApi}
      */
     public static IScriptConditionsApi op;
 
     /**
-     * используется для обращения к скриптовому модулю и конкретному методу,
-     * определенному в нем, с помощью конструкции: modules.{код модуля}.{имя метода}({параметры метода}...);
+     * Модули системы
+     * <p>Используется для обращения к скриптовому модулю и конкретному методу,
+     * определенному в нем, с помощью конструкции: </p>
+     * <code>modules.{код модуля}.{имя метода}({параметры метода}...);</code>
      */
     public static Map<String,Object> modules;
 
@@ -105,138 +106,125 @@ public class ApiPlaceholder {
         public static IActionContextApi actionContext;
 
         /**
-         * Работа с транзакциями
+         * Работа с транзакциями {@link ru.naumen.core.server.script.api.TransactionApi}
          */
         public ITransactionApi tx;
 
         /**
-         * Работа с метаинформацией
+         * Работа с метаинформацией {@link ru.naumen.core.server.script.api.MetainfoApi}
          */
-        //реализация в ru.naumen.core.server.script.api.MetainfoApi
         public IMetainfoApi metainfo;
 
         /**
-         * Поиск объектов
-         * Работа с объектами
-         * Работа с родительскими и дочерними объектами
-         * Работа с атрибутами объекта
-         * Работа с комментариями
-         * Работа с файлами
-         * Работа с шаблонами Groovy
-         * Редактирование таблицы соответствий
-         * Форматирование данных
+         * Поиск объектов {@link ru.naumen.core.server.script.spi.ScriptUtils}
+         * <ul>
+         * <li>Работа с объектами</li>
+         * <li>Работа с родительскими и дочерними объектами</li>
+         * <li>Работа с атрибутами объекта</li>
+         * <li>Работа с комментариями</li>
+         * <li>Работа с файлами</li>
+         * <li>Работа с шаблонами Groovy</li>
+         * <li>Редактирование таблицы соответствий</li>
+         * <li>Форматирование данных</li>
+         * </ul>
          */
-        //реализация в ru.naumen.core.server.script.spi.ScriptUtils
         public IScriptUtils utils;
 
         /**
-         * Работа с временными характеристиками и счетчиками времени
+         * Работа с временными характеристиками и счетчиками времени {@link ru.naumen.core.server.script.api.TimingApi}
          */
-        //реализация в ru.naumen.core.server.script.api.TimingApi
         public ITimingApi timing;
 
         /**
-         * Формирование ссылок, ведущих в заданное место в интерфейсе
+         * Формирование ссылок, ведущих в заданное место в интерфейсе {@link ru.naumen.core.server.script.api.WebApi}
          */
-        //реализация в ru.naumen.core.server.script.api.WebApi
         public IWebApi web;
 
         /**
-         * Персональные настройками сотрудника
+         * Персональные настройками сотрудника {@link ru.naumen.core.server.script.api.EmployeeApi}
          */
-        //реализация в ru.naumen.core.server.script.api.EmployeeApi
         public IEmployeeApi employee;
 
         /**
-         * Работа с оргструктурой
+         * Работа с оргструктурой {@link ru.naumen.core.server.script.api.OuApi}
          */
-        //реализация в ru.naumen.core.server.script.api.OuApi
         public IOuApi ou;
 
         /**
-         * Работа с датами
+         * Работа с датами {@link ru.naumen.core.server.script.api.DateApi}
          */
-        //реализация в ru.naumen.core.server.script.api.DateApi
         public IDateApi date;
 
         /**
-         * Формирование ссылок для выполнения действий без перехода в интерфейс системы
+         * Формирование ссылок для выполнения действий без перехода в интерфейс системы {@link ru.naumen.core.server.rest.RestApi}
          */
-        //реализация в ru.naumen.core.server.rest.RestApi
         public IRestApi rest;
 
         /**
-         * Работа с кэшем
+         * Работа с кэшем @link ru.naumen.core.server.script.api.CacheApi}
          */
-        //реализация в ru.naumen.core.server.script.api.CacheApi
         public ICacheApi cache;
 
         /**
-         * Работа с ключами авторизации
+         * Работа с ключами авторизации {@link ru.naumen.core.server.script.api.AuthenticationApi}
          */
-        //реализация в ru.naumen.core.server.script.api.AuthenticationApi
         public IAuthenticationApi auth;
 
         /**
-         * Работа с правами
+         * Работа с правами {@link ru.naumen.core.server.script.api.SecurityApi}
          */
-        //реализация в ru.naumen.core.server.script.api.SecurityApi
         public ISecurityApi security;
 
         /**
-         * Отправка уведомления
+         * Отправка уведомления {@link ru.naumen.core.server.script.api.NotificationApi}
          */
-        //реализация в ru.naumen.core.server.script.api.NotificationApi
         public INotificationApi notification;
 
         /**
-         * Работа с планировщиком
+         * Работа с планировщиком {@link ru.naumen.core.server.script.api.SchedulerApi}
          */
-        //реализация в ru.naumen.core.server.script.api.SchedulerApi
         public ISchedulerApi scheduler;
 
         /**
-         * Формирование штрих-кодов
+         * Формирование штрих-кодов {@link ru.naumen.core.server.script.api.BarcodeApi}
          */
-        //реализация в ru.naumen.core.server.script.api.BarcodeApi
         public IBarcodeApi barcode;
 
         /**
-         * использование запросов к базе данных
+         * Использование запросов к базе данных {@link ru.naumen.core.server.script.api.DbApi}
          */
-        //реализация в ru.naumen.core.server.script.api.DbApi
         public IDbApi db;
 
         /**
-         * Шифрование и дешифрование
+         * Шифрование и дешифрование {@link ru.naumen.core.server.script.api.EncrytionApi}
          */
-        //реализация в ru.naumen.core.server.script.api.EncrytionApi
         public IEncrytionApi encryption;
 
         /**
-         * Формирование запросов к JSON сервисам
+         * Формирование запросов к JSON сервисам {@link ru.naumen.core.server.script.api.HttpClientApi}
          */
-        //реализация в ru.naumen.core.server.script.api.HttpClientApi
         public IHttpClientApi http;
 
         /**
-         * Работа с импортом
+         * Работа с импортом {@link ru.naumen.core.server.script.api.AdvimportApi}
          */
-        //реализация в ru.naumen.core.server.script.api.AdvimportApi
         public IAdvimportApi advimport;
 
         /**
-         * Обработка почты
-         * Отправка сообщений
+         * Обработка почты {@link ru.naumen.mailreader.server.processor.scripted.MailApi}
          */
-        //реализация в ru.naumen.mailreader.server.processor.scripted.MailApi
+        //реализация в
         public IMailApi mail;
 
         /**
-         * Работа с тимпами
+         * Работа с типами {@link ru.naumen.core.server.script.api.TypesApi}
          */
-        //реализация в ru.naumen.core.server.script.api.TypesApi
         public TypesApi types;
+
+        /**
+         * Работа со строками {@link ru.naumen.core.server.script.api.StringApi}
+         */
+        public StringApi string;
 
     }
 }
