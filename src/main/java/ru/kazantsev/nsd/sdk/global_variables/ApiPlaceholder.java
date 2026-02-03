@@ -27,7 +27,6 @@ import java.util.Map;
  * api.silentMode Работа с Silent Mode
  * api.sms Отправка SMS
  * api.soap Формирование запросов к SOAP сервисам
- * api.string Утилитарные методы для работы со строками
  * api.structure. Работа со структурами
  * api.systemUtils. Быстрое редактирование объектов
  * api.websocket Методы для работы с Websocket-каналом
@@ -112,7 +111,7 @@ public class ApiPlaceholder {
          * Работа с метаинформацией
          */
         //реализация в ru.naumen.core.server.script.api.MetainfoApi
-        public IMetainfoApi metainfo;
+        public MetainfoApi metainfo;
 
         /**
          * Поиск объектов
