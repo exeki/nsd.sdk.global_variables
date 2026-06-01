@@ -29,7 +29,7 @@ repositories {
     maven {
         url = uri("https://maven.pkg.github.com/exeki/*")
         credentials {
-            username = System.getenv("GITHUB_USERNAME")
+            username = System.getenv("GITHUB_LOGIN")
             password = System.getenv("GITHUB_TOKEN")
         }
     }
