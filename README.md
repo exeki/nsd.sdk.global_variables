@@ -39,7 +39,7 @@ repositories {
 2. Добавьте туда же библиотеку:
 ```kotlin
 dependencies {
-    implementation("ru.kazantsev.nsd:sdk.global_variables:<version>")
+    implementation("ru.kazantsev.nsd.sdk:global_variables:<version>")
 }
 ```
 
